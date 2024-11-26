@@ -1,0 +1,16 @@
+<menu>
+    <menuitem label='Listagem de Pessoas'>
+        <icon>fa:list fa-fw</icon>
+        <action>PessoaList</action>
+    </menuitem>
+    <menuitem label='Cadastro de Pessoas'>
+        <icon>fa:user fa-fw</icon>
+        <action>PessoaFormView</action>
+    </menuitem>
+    <menuitem label='Produtos Disponíveis'>
+        <icon>fa:shopping-cart fa-fw</icon>
+        <action>ProductListView</action>
+    </menuitem>
+</menu>        
+
+ 

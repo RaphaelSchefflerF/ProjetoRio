@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html id="iframe_content" class="notranslate" translate="no">
+<head>
+    <title>{title}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json?appver=760">
+    <!-- Tornar o layout responsivo -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/images/icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    {LIBRARIES}
+    {HEAD}
+    
+    <script src="app/lib/include/admin-all.min.js?appver=760" type="text/javascript"></script>
+    <link href="app/lib/include/admin.min.css?appver=760" rel="stylesheet" type="text/css" media="screen">
+
+    <link href="app/templates/{template}/css/AdminLTE.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="app/templates/{template}/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="app/templates/{template}/css/custom.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="lib/adianti/include/iframe.js?appver=1" type="text/javascript"></script>
+
+    <style>
+        /* Estilo customizado para o iframe */
+        body {
+            background: #f4f6f9;
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .iframe-navbar {
+            background: linear-gradient(90deg, #0062cc, #33b5e5);
+            padding: 10px;
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .iframe-navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .iframe-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iframe-container">
+        <div class="iframe-navbar">
+            <span>Informações do Iframe</span>
+            <div>
+                <a href="javascript:history.back()">Voltar</a>
+                <a href="javascript:window.print()">Imprimir</a>
+            </div>
+        </div>
+        <div id="adianti_div_content" class="iframe-content"></div>
+    </div>
+    <div id="adianti_online_content"></div>
+    <div id="adianti_online_content2"></div>
+    <div id="adianti_right_panel" class="right-panel"></div>
+    <script language="JavaScript">    
+        __adianti_set_language('{lang}');
+    </script>
+    <script src="app/templates/{template}/js/app.min.js"></script>
+    <script src="app/templates/{template}/js/custom.js"></script>
+</body>
+</html>
